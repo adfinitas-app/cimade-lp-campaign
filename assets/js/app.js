@@ -1,5 +1,6 @@
 $(document).ready(function()
 {
+	AdaptHeader();
 	//CENTER
 	function 	vertical_center(item)
 	{
@@ -9,7 +10,7 @@ $(document).ready(function()
 
 		height = $(item).height();
 		total_height = $(item).parent().height();
-		if (total_height + 1 < height)
+		if (total_height - 1 < height)
 			return (false);
 		padding = (total_height - height) / 2 - 20;
 		$(item).css({"padding-top" : padding});
@@ -17,7 +18,9 @@ $(document).ready(function()
 	}
 
 	//INITIAL CENTER
-	$(".content").each(function(){console.log("hello");vertical_center(this);});
+	$(".content").each(function(){
+		vertical_center(this);
+	});
 
 	//RESIZE CENTER
 	$(window).resize(function() {
@@ -54,4 +57,37 @@ $(document).ready(function()
 
 	});
 
+	$("#link-accompagner").hover(function() {
+		$("#text-accompagner").show();
+		$("#text-observer").hide();
+		$("#text-denoncer").hide();
+		$("#text-actions").hide();
+	});
+	$("#link-observer").hover(function() {
+		$("#text-observer").show();
+		$("#text-actions").hide();
+		$("#text-accompagner").hide();
+		$("#text-denoncer").hide();
+	});
+	$("#link-denoncer").hover(function() {
+		$("#text-denoncer").show();
+		$("#text-observer").hide();
+		$("#text-actions").hide();
+		$("#text-accompagner").hide();
+	});
+	$("#link-actions").hover(function() {
+		$("#text-actions").show();
+		$("#text-observer").hide();
+		$("#text-accompagner").hide();
+		$("#text-denoncer").hide();
+	});
 });
+
+function AdaptHeader() {
+	var y = document.getElementById('header').clientHeight;
+
+	$('.block-header-r').css({'height' : y});
+	var x = $(".text-header").css('height');
+	$('.block-header').css({"height" : y, "padding-top" : ((y - parseInt(x)) / 2)});
+	$('.block-header-r').css({"height" : y, "padding-top" : ((y - parseInt(x)) / 2)});
+} 

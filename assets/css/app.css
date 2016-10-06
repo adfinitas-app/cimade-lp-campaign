@@ -1,45 +1,91 @@
-/*GLOBAL*/
-button:focus {outline:0;}
+/** {
+	background: #000 !important;
+	color: #0f0 !important;
+	outline: solid #f00 1px !important;
+	}*/
 
-/*CUSTOM*/
-.full
-{
-	min-height: 100vh;
-}
+	.video-container {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 30px;
+		height: 0;
+		overflow: hidden;
+	}
+	.video-container iframe,
+	.video-container object,
+	.video-container embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 
-#button_play
-{
-	background: none;
-	color: white;
-	font-size: 25px;
-	padding-left: 25px;
-	padding-right: 25px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border: 2px solid white;
-	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	-ms-transition: all .2s ease-in-out;
-}
+	/*GLOBAL*/
+	button:focus {outline:0;}
 
-#button_play:hover
-{
-	background: rgba(255,255,255,0.5);
-}
+	/*CUSTOM*/
+	.full
+	{
+		max-width: 100%;
+		min-height: 100vh;
+	}
 
-#bg_video { 
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	width: auto;
-	height: auto;
-	z-index: -100;
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-	background-size: cover; 
-}
+	.text-slide-display-text {
+		padding-right: 10px;
+		color: #FFFFFF;
+		text-align: right;
+		padding: 0;
+		margin: 0;
+	}
+	#button_play
+	{
+		background: none;
+		color: white;
+		font-size: 25px;
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border: 2px solid white;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		-ms-transition: all .2s ease-in-out;
+	}
+
+	.no-display {
+		display: none;
+	}
+	#button_play:hover
+	{
+		background: rgba(255,255,255,0.5);
+	}
+
+	#bg_video { 
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		width: auto;
+		height: auto;
+		z-index: -100;
+		-ms-transform: translateX(-50%) translateY(-50%);
+		-moz-transform: translateX(-50%) translateY(-50%);
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+		background-size: cover; 
+	}
+
+	.block-header-r {
+		background: #a8a8a8;
+		text-align: center;
+	}
+	.block-header-r:hover {
+		background: grey;
+	}
+
+	#right-block-header {
+		font-size: 12px;
+	}
 
