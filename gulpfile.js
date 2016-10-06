@@ -14,10 +14,8 @@ gulp.task('browser-sync', function() {
 	    baseDir: "./"
 	}
     });
-    gulp.watch("./inky/*.html", ['conversion-html']);
-    gulp.watch("./css/*.css", ['conversion-css']);
     gulp.watch("*.html", ['bs-reload']);
-    gulp.watch("./css/*", ['bs-reload']);
+    gulp.watch("./assets/*/*", ['bs-reload']);
 });
 
 gulp.task('bs-reload', function () {
@@ -27,19 +25,4 @@ gulp.task('bs-reload', function () {
 gulp.task('default', ['browser-sync'], function(){
     gulp.watch("src/styles/**/*.scss", ['styles']);
     gulp.watch("*.html", ['bs-reload']);
-});
-
-gulp.task('conversion-css', function () {
-    return gulp.src('./css/*.css')
-	.pipe(sourcemaps.init())
-	.pipe(autoprefixer())
-	.pipe(concat('all.css'))
-	.pipe(sourcemaps.write('.'))
-	.pipe(gulp.dest('./css/converted/'));
-});
-
-gulp.task('conversion-html', function () {
-    return gulp.src('./inky/*.html')
-	.pipe(inky())
-	.pipe(gulp.dest('./converted/'));
 });
