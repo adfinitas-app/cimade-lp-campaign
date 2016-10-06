@@ -1,3 +1,31 @@
+@font-face {
+	font-family: 'Audimat';
+	src: url('/assets/fonts/AUdimat-Regular.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Audimat Bold';
+	src: url('/assets/fonts/AUdimat-Bold.otf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'UniversLTStd';
+	src: url('/assets/fonts/UniversLTStd.otf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'UniversLTStd Bold';
+	src: url('/assets/fonts/UniversLTStd-Bold.otf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
 /** {
 	background: #000 !important;
 	color: #0f0 !important;
@@ -78,14 +106,20 @@
 	}
 
 	.block-header-r {
-		background: #a8a8a8;
+		background: #f1f1f1;
 		text-align: center;
 	}
 	.block-header-r:hover {
-		background: grey;
+		background: #dfdede;
 	}
 
 	#right-block-header {
 		font-size: 12px;
+	}
+
+	.text-header {
+		font-family: 'Helvetica';
+		font-weight: bold;
+		font-size: 14px;
 	}
 
