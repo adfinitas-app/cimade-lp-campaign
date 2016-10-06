@@ -11,7 +11,6 @@ $(document).ready(function()
 		total_height = $(item).parent().height();
 		if (total_height + 1 < height)
 			return (false);
-		console.log("resizing");
 		padding = (total_height - height) / 2 - 20;
 		$(item).css({"padding-top" : padding});
 		return (true);
