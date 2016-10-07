@@ -58,11 +58,7 @@
 			<p style="color: white; font-size: 24px; font-family: 'Audimat'">Découvrez vite la vidéo démo et faites avancer la cause d’Elias, d’Iréna et de Zeinab.</p>
 			<div class="global-container-video-demo">
 				<div id="container-video-demo" class="large-offset-2 large-8 end columns" style="margin-top: 30px; margin-bottom: 40px;">
-					<div class="video-container">
-						<div id="video-test">
-							<!--<iframe id="video-demo" width="560" height="315" src="https://www.youtube.com/embed/Du9zAaFluos" frameborder="0" allowfullscreen></iframe>-->
-						</div>
-					</div>
+					<div id="video-container"></div>
 				</div>
 				<div id="container-button-video-demo" class="show-for-small-only" style="padding: 0; margin: 0;">
 					<button id="button-video-demo" type="button" style="margin-bottom: 40px" class="button button-empty-bg"><span style="font-size: 24px; font-family: 'Audimat'">Voir la vidéo</span></button>
@@ -73,7 +69,7 @@
 	<script>
 		var player, playing = false;
 		function onYouTubeIframeAPIReady() {
-			player = new YT.Player('video-test', {
+			player = new YT.Player('video-container', {
 				height: '315',
 				width: '560',
 				videoId: 'Du9zAaFluos',
@@ -85,14 +81,13 @@
 
 		function onPlayerStateChange(event) {
 			if(!playing){
-				console.log("Youtube video playing right now !!");
+				playing = true;
 				woopra.track('interaction', {
 					category: "demo-MG16",
 					action: "clic",
 					url: document.location.href,
 					title: document.title
 				});      
-				playing = true;
 			}
 		}
 	</script>

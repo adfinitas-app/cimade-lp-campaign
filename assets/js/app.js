@@ -185,7 +185,7 @@ function 	scrollTo(next){
 
 $('#container-button-video-demo').click(function () {
 	$('#container-button-video-demo').hide();
-	$('.video-container').show();
+	$('#video-container').show();
 	$('#container-video-demo').show();
 });
 
