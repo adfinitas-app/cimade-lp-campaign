@@ -58,7 +58,6 @@ $(document).ready(function()
 			if ($(this).height() < $(this).next().height() && count % 2 == 0)
 			{
 				height = $(this).next().height() - $(this).height() + $(this).find(".box_item").height();
-				console.log("smaller");
 				$(this).find(".box_item").first().css({"height": height});
 			}
 			else if ($(this).height() < $(this).next().height() && count / 2 == 0)
