@@ -7,3 +7,6 @@ $('.logo').click ( function () {
 	});
 });
 
+$(".btn_share_fb").click(function(){
+	woopra.track('interaction', {category:"fb-MG16",action:"clic",url:document.location.href,title: document.title});
+});

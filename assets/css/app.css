@@ -136,11 +136,23 @@ a:hover
 .btn_share_fb
 {
 	padding: 20px;
-	width: 100%;
 	border: 2px solid white;
 	font-family: 'Audimat';
 	font-size: 25px;
+	max-width: 400px;
+	background-color: #39579a;
+	color: white;
+	text-align: center;
+	text-decoration: none
 }
+
+.btn_share_fb:hover
+{
+	background-color: white;
+	color: #39579a;
+}
+
+
 /** {
 	background: #000 !important;
 	color: #0f0 !important;
