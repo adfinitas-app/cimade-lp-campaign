@@ -185,16 +185,16 @@ a:hover
 		min-height: 0;
 	}
 
-	.video-container {
+	#container-video-demo {
 		position: relative;
 		padding-bottom: 56.25%;
 		padding-top: 30px;
 		height: 0;
 		overflow: hidden;
 	}
-	.video-container iframe,
-	.video-container object,
-	.video-container embed {
+	#container-video-demo iframe,
+	#container-video-demo object,
+	#container-video-demo embed {
 		position: absolute;
 		top: 0;
 		left: 0;
