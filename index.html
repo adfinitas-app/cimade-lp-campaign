@@ -21,7 +21,7 @@
 					<button class="portrait-irena"><img class="portrait-header" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_i-off.png" style="display: inline-block;"></button>
 					<button class="portrait-zeinab"><img class="portrait-header" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_z-off.png" style="display: inline-block;"></button>
 				</div>
-				<a href="#"><div class="medium-3 large-3 columns block-header-r end" style="max-width: 100%; margin: 0">
+				<a id="scroll_actions"><div class="medium-3 large-3 columns block-header-r end" style="max-width: 100%; margin: 0">
 					<p class="text-header">LES ACTIONS</p>
 				</div></a>
 						<!-- A PARTIR DU 28 OCTOBRE
@@ -50,16 +50,16 @@
 		<p style="margin: 0; padding: 10px" class="text-header" style="padding: 10px">LES COULISSES</p>
 	</div></a>
 </div>
-<div class="row" id="slide-video-demo" style="max-width: 100%;text-align: center; background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_bg_dark.png'); background-position: 50% 10%; background-size: cover;">
+<div class="row" id="slide-video-demo" style="max-width: 100%;text-align: center; background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_bg_dark.png'); background-position: 50% 10%; background-size: cover; min-height: 0vh; padding-bottom: 40px">
 	<div class="large-10 large-centered columns">
-		<p style="color: #ee2e24; padding-top: 30px; font-family: 'Audimat Bold'; font-size: 42px; margin-bottom: 0; line-height: 45px;">BIENVENUE SUR MOVINGGESTURE</p>
-		<p style="text-transform: uppercase; font-size: 24px; color: white; font-family: 'Audimat'">Une campagne mobile interactive !</p>
-		<p style="color: #FFFFFF; font-size: 13px; font-family: 'UniversLTStd';">La campagne « Moving Gesture » vous  invite à découvrir le parcours de 3 personnes exilées en but avec des obstacles.<br />
-			Un geste de votre part peut leur permettre de franchir les obstacles…
+		<p style="color: #ee2e24; padding-top: 30px; font-family: 'Audimat Bold'; font-size: 3em; margin-bottom: 0; line-height: 45px;">BIENVENUE SUR MOVINGGESTURE</p>
+		<p style="text-transform: uppercase; font-size: 2em; color: white; font-family: 'Audimat'">Une campagne mobile interactive !</p>
+		<p style="color: #FFFFFF; font-size: 1em; font-family: 'UniversLTStd';">La campagne <span style="font-weight: bold">« Moving Gesture »</span> vous  invite à découvrir le parcours de 3 personnes exilées en but avec des obstacles.<br />
+			<span style="font-weight: bold">Un geste de votre part</span> peut leur permettre de franchir les obstacles…
 		</p>
-		<p style="color: white; font-size: 24px; font-family: 'Audimat'">Découvrez vite la vidéo démo et faites avancer la cause d’Elias, d’Iréna et de Zeinab.</p>
-		<div class="global-container-video-demo">
-			<div id="container-video-demo" class="large-offset-2 large-8 end columns" style="margin-top: 30px; margin-bottom: 40px;">
+		<p style="color: white; font-size: 2em; font-family: 'Audimat'">Découvrez vite la vidéo démo et faites avancer la cause d’Elias, d’Iréna et de Zeinab.</p>
+		<div class="global-container-video-demo row">
+			<div id="container-video-demo" class="large-offset-2 large-8 end columns" style="margin-top: 30px; margin-bottom: 20px">
 				<div id="video-container"></div>
 			</div>
 			<div id="container-button-video-demo" class="show-for-small-only" style="padding: 0; margin: 0;">
@@ -67,105 +67,195 @@
 			</div>
 		</div>
 	</div>
-</div>
-<script>
-	var player, playing = false;
-	function onYouTubeIframeAPIReady() {
-		player = new YT.Player('video-container', {
-			height: '315',
-			width: '560',
-			videoId: 'Du9zAaFluos',
-			events: {
-				'onStateChange': onPlayerStateChange
-			}
-		});
-	}
-
-	function onPlayerStateChange(event) {
-		if(!playing){
-			playing = true;
-			woopra.track('interaction', {
-				category: "demo-MG16",
-				action: "clic",
-				url: document.location.href,
-				title: document.title
-			});      
-		}
-	}
-</script>
-<div id="contener-img-teaser" class="row" style="max-width:100%; padding-top: 80px; padding-bottom: 40px; background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_elias.png'); background-position: 50% 10%; background-size: cover">
-	<div class="small-centered small-11 medium-10 large-offset-2 large-7 columns">
-		<div style="background: #373a4d; width: 350px; text-align: center">
-			<p id="titre-teaser" style="color: #FFFFFF; font-size: 26px;">À PARTIR DU 18 OCTOBRE</p>
-		</div>
-		<p  id="description-teaser" style="color: white; font-size: 20px;">Retrouvez le portrait d’Elias, 35 ans, syrien, bloqué à Calais.</p>
-	</div>
-</div>
-	<!--<div class="row full">
-		<div class="content" id="slide_video">
-			<div style="text-align: center;">
-				<button id="button_play">Voir la vidéo</button>
+	<div class="row">
+		<div class="small-offset-2 small-8 columns">
+			<a class="btn_share_fb" style="max-width: 400px; background-color: #39579a; color: white; text-align: center; text-decoration: none">
+				<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img-fb-button.png" style="margin-right: 15px">
+				Agir sur Facebook</a>
 			</div>
 		</div>
-		<video playsinline autoplay muted loop id="bg_video"><source src="assets/img/video.mp4" type="video/mp4"></video>
-	</div>-->
+	</div>
+	<script>
+		var player, playing = false;
+		function onYouTubeIframeAPIReady() {
+			player = new YT.Player('video-container', {
+				height: '315',
+				width: '560',
+				videoId: 'Du9zAaFluos',
+				events: {
+					'onStateChange': onPlayerStateChange
+				}
+			});
+		}
 
-	<!--
-	<div class="row full" style="background: grey">
-		<div class="row" style="max-width: 100%">
-			<div class="large-12 columns">
-				<div class="row">
-					<p style="text-align: center">COMMENT AGISSONS-NOUS POUR VENIR EN AIDE À IRENA ?</p>
+		function onPlayerStateChange(event) {
+			if(!playing){
+				playing = true;
+				woopra.track('interaction', {
+					category: "demo-MG16",
+					action: "clic",
+					url: document.location.href,
+					title: document.title
+				});      
+			}
+		}
+	</script>
+	<div id="contener-img-teaser" class="row" style="max-width:100%; padding-top: 80px; padding-bottom: 40px; background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_elias.png'); background-position: 50% 10%; background-size: cover">
+		<div class="small-centered small-11 medium-10 large-offset-2 large-7 columns">
+			<div style="background: #373a4d; width: 350px; text-align: center">
+				<p id="titre-teaser" style="color: #FFFFFF; font-size: 26px;">À PARTIR DU 18 OCTOBRE</p>
+			</div>
+			<p  id="description-teaser" style="color: white; font-size: 20px;">Retrouvez le portrait d’Elias, 35 ans, syrien, bloqué à Calais.</p>
+		</div>
+	</div>
+	<div class="row full" id="actions" style="background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_bg_aide.png'); background-size: cover; background-position: 50% 10%; padding-bottom: 2em">
+		<div style="text-align: center; width: 96%; margin-left:2%; margin-right:2%;">
+			<h2 class="subtitle" style="margin-top: 1em">La CIMADE accompagne et oriente<br>plus de 170 000 personnes étrangères chauqe année</h2><br>
+			<div class="box_resize" style="height: auto; padding: 0; display: inline-block; margin-left: 7px; margin-right: 7px;">
+				<div class="box_item box_item_prop" style="background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_aide_1.png'); position: relative; background-position: 47% 60%; width: 100%;">
+					<div class="title_image">
+						<div class="img_title_container">
+							<p class="img_title">Appui aux femmes victimes de violence</p>
+						</div>
+						<div class="img_text_container" style="opacity: 0; filter: alpha(opacity=0);">
+							<p class="text_style_large" >La Cimade accompagne les victimes de discriminations et de violences au sein de ses permanences juridiques. Les équipes mènent un important travail auprès des femmes, majoritairement représentées, car les situations de violence conjugale ont des répercussions sur le droit au séjour ou son renouvellement.<br><br><a href="http://www.lacimade.org/nos-actions/femmes-et-violences/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus ></a></p>
+						</div>
+					</div>
 				</div>
-				<div class="row">
-					<div class="medium-9 small-centered large-8 columns">
-						<div class="small-4 medium-5 large-4 columns" style="border-right: 2px solid white; text-align: right">
-							<div id="link-accompagner" href="#"><span id="text-link-accompagner" class="text-slide-display-text">&#9658; ACCOMPAGNER</span></div>
-							<div id="link-observer" href="#"><span id="text-link-observer" class="text-slide-display-text">OBSERVER</span></div>
-							<div id="link-denoncer" href="#"><span id="text-link-denoncer" class="text-slide-display-text">DÉNONCER</span></div>
-							<div id="link-actions" href="#"><span id="text-link-actions" class="text-slide-display-text">ACTIONS JURIDIQUES</span></div>
+				<div class="box_item text_container_small" style="">
+					<div class="img_text_container_small">
+						<p class="img_title">Appui aux femmes victimes de violence</p>
+						<p class="text_style_small">La Cimade accompagne les victimes de discriminations et de violences au sein de ses permanences juridiques. Les équipes mènent un important travail auprès des femmes, majoritairement représentées, car les situations de violence conjugale ont des répercussions sur le droit au séjour ou son renouvellement.<br><br><a href="http://www.lacimade.org/nos-actions/femmes-et-violences/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus ></a></p>
+					</div>
+				</div>
+			</div>
+			<div class="box_resize" style="height: auto; padding: 0; display: inline-block; margin-left: 7px; margin-right: 7px;">
+				<div class="box_item box_item_prop" style="background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_aide_2.png'); position: relative; background-position: 47% 60%; width: 100%;">
+					<div class="title_image">
+						<div class="img_title_container">
+							<p class="img_title">Hébergement des réfugiés</p>
 						</div>
-						<div class="small-8 medium-7 large-8 columns">
-							<p id="text-accompagner">Texte accompagner</p>
-							<p class="no-display" id="text-observer">Texte observer</p>
-							<p class="no-display" id="text-denoncer">Texte denoncer</p>
-							<p class="no-display" id="text-actions">Texte actions</p>
+						<div class="img_text_container" style="opacity: 0; filter: alpha(opacity=0);">
+							<p class="text_style_large">Parmi les personnes affectées par le mal logement en France, les personnes étrangères en attente de statut ou déboutées vivent dans une précarité extrême. La Cimade dispose d’un centre d’accueil pour les réfugiés en Essonne , d’un centre d’accueil pour demandeurs d’asile à Béziers, et s’organise avec des collectifs pour le soutien à la création de lieux de vie et hébergement solidaire.<br><br><a href="http://www.lacimade.org/nos-actions/hebergement/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus ></a></p>
 						</div>
+					</div>
+				</div>
+				<div class="box_item text_container_small" style="margin-top: -17px; height: auto; margin-bottom: 10px; width: 100%;">
+					<div class="img_text_container_small">
+						<p class="img_title">Hébergement des réfugiés</p>
+						<p class="text_style_small">Parmi les personnes affectées par le mal logement en France, les personnes étrangères en attente de statut ou déboutées vivent dans une précarité extrême. La Cimade dispose d’un centre d’accueil pour les réfugiés en Essonne , d’un centre d’accueil pour demandeurs d’asile à Béziers, et s’organise avec des collectifs pour le soutien à la création de lieux de vie et hébergement solidaire.<br><br><a href="http://www.lacimade.org/nos-actions/hebergement/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus ></a></p>
+					</div>
+				</div>
+			</div>
+			<div class="box_resize" style="height: auto; padding: 0; display: inline-block; margin-left: 7px; margin-right: 7px;">
+				<div class="box_item box_item_prop" style="background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_aide_3.png'); position: relative; width: 100%;">
+					<div class="title_image">
+						<div class="img_title_container">
+							<p class="img_title">Sensibilisation de l'opinion</p>
+						</div>
+						<div class="img_text_container" style="opacity: 0; filter: alpha(opacity=0);">
+							<p class="text_style_large">Les mutations constantes des migrations, rendent difficile la compréhension des enjeux liés à l’accueil des personnes étrangères. La Cimade porte la voix des personnes étrangères, dénonce les atteintes aux droits fondamentaux. 800 actions de sensibilisation sont menées chaque année pour inviter le public à regarder les faits autrement. Point d’orgue de la sensibilisation, le festival Migrant ‘Scène se déroule dans plus de 55 villes en France.<br><br><a href="http://www.lacimade.org/nos-actions/sensibilisation/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus ></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="box_item text_container_small" style="margin-top: -17px; height: auto; margin-bottom: 10px; width: 100%;">
+					<div class="img_text_container_small">
+						<p class="img_title">Sensibilisation de l'opinion</p>
+						<p class="text_style_small">Les mutations constantes des migrations, rendent difficile la compréhension des enjeux liés à l’accueil des personnes étrangères. La Cimade porte la voix des personnes étrangères, dénonce les atteintes aux droits fondamentaux. 800 actions de sensibilisation sont menées chaque année pour inviter le public à regarder les faits autrement. Point d’orgue de la sensibilisation, le festival Migrant ‘Scène se déroule dans plus de 55 villes en France.<br><br><a href="http://www.lacimade.org/nos-actions/sensibilisation/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus ></a></p>
+					</div>
+				</div>
+			</div>
+			<div class="box_resize" style="height: auto; padding: 0; display: inline-block; margin-left: 7px; margin-right: 7px;">
+				<div class="box_item box_item_prop" style="background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_aide_4.png'); position: relative; background-position: 47% 60%; width: 100%;">
+					<div class="title_image">
+						<div class="img_title_container">
+							<p class="img_title">Aider les détenus étrangers</p>
+						</div>
+						<div class="img_text_container" style="opacity: 0; filter: alpha(opacity=0);">
+							<p class="text_style_large" style="font-size: 15px;">Parmi les 50 bénévoles interviennent dans 77 établissements dans le cadre d’une convention et d’un protocole nationaux signés avec l’administration pénitentiaire. Ils y suivent environ 2 600 personnes étrangères détenues. La Cimade œuvre sur les accès au titre de séjour et la procédure de demande d’asile assez ardus en prison. Lieu ou le droit est régulièrement bafoué, les bénévoles  interviennent sur de nombreux autres sujets comme les mesures  d’éloignement ou l’aménagement de peine… <br><br><a href="http://www.lacimade.org/nos-actions/prison/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus ></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="box_item text_container_small" style="margin-top: -17px; height: auto; margin-bottom: 10px; width: 100%;">
+					<div class="img_text_container_small">
+						<p class="img_title">Aider les détenus étrangers</p>
+						<p class="text_style_small">Parmi les 50 bénévoles interviennent dans 77 établissements dans le cadre d’une convention et d’un protocole nationaux signés avec l’administration pénitentiaire. Ils y suivent environ 2 600 personnes étrangères détenues. La Cimade œuvre sur les accès au titre de séjour et la procédure de demande d’asile assez ardus en prison. Lieu ou le droit est régulièrement bafoué, les bénévoles  interviennent sur de nombreux autres sujets comme les mesures  d’éloignement ou l’aménagement de peine… <br><br><a href="http://www.lacimade.org/nos-actions/prison/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus ></a></p>
+					</div>
+				</div>
+			</div>
+			<div class="box_resize" style="height: auto; padding: 0; display: inline-block; margin-left: 7px; margin-right: 7px;">
+				<div class="box_item box_item_prop" style="background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_aide_5.png'); position: relative; background-position: 47% 60%; width: 100%;">
+					<div class="title_image">
+						<div class="img_title_container">
+							<p class="img_title">Soutenir les personnes en rétention administrative</p>
+						</div>
+						<div class="img_text_container" style=" opacity: 0; filter: alpha(opacity=0);">
+							<p class="text_style_large" style="font-size: 15px;">Près de 45 000 personnes sont enfermées en centre de rétention administrative. On déplore le placement de plus de 4300 enfants à Mayotte et près de 105 enfants en métropole.  La Cimade est présente au quotidien dans 8 centres où elle aide 8 000 personnes au moyen d’un accompagnement juridique poussé. Témoin de pratiques illégales, elle dénonce par voie de presse les abus constatés.<br><br><a href="http://www.lacimade.org/nos-actions/retention-et-expulsion/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus ></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="box_item text_container_small" style="margin-top: -17px; height: auto; margin-bottom: 10px; width: 100%;">
+					<div class="img_text_container_small">
+						<p class="img_title">Soutenir les personnes en rétention administrative</p>
+						<p class="text_style_small">Près de 45 000 personnes sont enfermées en centre de rétention administrative. On déplore le placement de plus de 4300 enfants à Mayotte et près de 105 enfants en métropole.  La Cimade est présente au quotidien dans 8 centres où elle aide 8 000 personnes au moyen d’un accompagnement juridique poussé. Témoin de pratiques illégales, elle dénonce par voie de presse les abus constatés.<br><br><a href="http://www.lacimade.org/nos-actions/retention-et-expulsion/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus></a></p>
+					</div>
+				</div>
+			</div>
+			<div class="box_resize" style="height: auto; padding: 0; display: inline-block; margin-left: 7px; margin-right: 7px;">
+				<div class="box_item box_item_prop" style="background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_aide_6.png'); position: relative; background-position: 47% 60%; width: 100%;">
+					<div class="title_image">
+						<div class="img_title_container">
+							<p class="img_title">Défendre les droits des malades étrangers</p>
+						</div>
+						<div class="img_text_container" style="opacity: 0; filter: alpha(opacity=0);">
+							<p class="text_style_large" style="font-size: 15px;">La Cimade milite pour que soient respectés les droits des personnes dans les domaines de la protection et de l’accès aux soins. Elle dispose de permanences d’aides aux démarches « santé droits sociaux ». Elle renforce les capacités de ses militants mais aussi de travailleurs sociaux par des formations et mène une activité intense de plaidoyer pour empêcher l’expulsion de personnes malades étrangères vers des pays ou les traitements sont indisponibles ou inaccessibles.<br><br><a href="http://www.lacimade.org/publication/rapport-de-lobservatoire-malades-etrangers/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus ></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="box_item text_container_small" style="margin-top: -17px; height: auto; margin-bottom: 10px; width: 100%;">
+					<div class="img_text_container_small">
+						<p class="img_title">Défendre les droits des malades étrangers</p>
+						<p class="text_style_small">La Cimade milite pour que soient respectés les droits des personnes dans les domaines de la protection et de l’accès aux soins. Elle dispose de permanences d’aides aux démarches « santé droits sociaux ». Elle renforce les capacités de ses militants mais aussi de travailleurs sociaux par des formations et mène une activité intense de plaidoyer pour empêcher l’expulsion de personnes malades étrangères vers des pays ou les traitements sont indisponibles ou inaccessibles.<br><br><a href="http://www.lacimade.org/publication/rapport-de-lobservatoire-malades-etrangers/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus ></a></p>
+					</div>
+				</div>
+			</div>
+			<div class="box_resize" style="height: auto; padding: 0; display: inline-block; margin-left: 7px; margin-right: 7px;">
+				<div class="box_item box_item_prop" style="background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_aide_7.png'); position: relative; background-position: 47% 60%; width: 100%;">
+					<div class="title_image">
+						<div class="img_title_container">
+							<p class="img_title">Outre-mer</p>
+						</div>
+						<div class="img_text_container" style="opacity: 0; filter: alpha(opacity=0);">
+							<p class="text_style_large" style="font-size: 15px;">Présente dans à la réunion, en Guyane, Guadeloupe et mayotte, La Cimade y agit dans les centres de rétention, auprès de milliers de mineurs étrangers abandonnés des services publics et auprès des décasés. Elle accompagne les personnes dans la défense de leurs droits.<br><br><a href="http://www.lacimade.org/regions/outre-mer/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="box_item text_container_small" style="margin-top: -17px; height: auto; margin-bottom: 10px; width: 100%;">
+					<div class="img_text_container_small">
+						<p class="img_title">Outre-mer</p>
+						<p class="text_style_small">Présente dans à la réunion, en Guyane, Guadeloupe et mayotte, La Cimade y agit dans les centres de rétention, auprès de milliers de mineurs étrangers abandonnés des services publics et auprès des décasés. Elle accompagne les personnes dans la défense de leurs droits.<br><br><a href="http://www.lacimade.org/regions/outre-mer/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16" target="_blank">En savoir plus ></a></p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="row" style="background: white; max-width: 100%">
-			<div class="small-8 large-4 small-centered columns" style="text-align: center">
-				<p>VOIR LE PORTRAIT D'ELIAS :</p>
-				<p>IMG</p>
+	</div>
+	<footer>
+		<div id="footer" class="row" style="background-color: white">
+			<div class="small-12 medium-6 large-5 columns" style="text-align: center; padding-top: 10px;">
+				<img alt="Logo La Cimade" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/logo.png">
+			</div>
+			<div class="small-12 medium-6 large-2 columns" style="display: inline; text-align: center; padding-top: 15px">
+				<a href="#"><img class="logo-footer" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_fb.png" alt="Page Facebook" style="display: inline-block; margin-right: 5px;"></a>
+				<a href="#"><img class="logo-footer" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_twit.png" alt="Page Twitter" style="display: inline-block"></a>
+				<a href="#"><img class="logo-footer" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_vm.png" alt="Page Vimeo" style="display: inline-block; margin-left: 5px"></a>
+			</div>
+			<div class="small-12 large-4 columns end" style="padding-top: 10px">
+				<p id="text-footer"><a href="#"><span class="link-footer">CONTACT</span></a> - <a href="#"><span class="link-footer">MENTIONS LÉGALES</span></a><br />CRÉDITS @ LA CIMADE 2016 - TOUS DROITS RÉSERVÉS</p>
 			</div>
 		</div>
-		<div class="row" style="max-width: 100%">
-			<div class="large-10 large-centered columns">
-				<p style="background: blue; padding: 10px; width: 22%;">A PARTIR DU 7 NOVEMBRE</p>
-				<p>RETROUVEZ...</p>
-			</div>
-		</div>
-	</div>
--->
-<footer>
-	<div id="footer" class="row">
-		<div class="small-12 medium-6 large-5 columns" style="text-align: center; padding-top: 10px;">
-			<img alt="Logo La Cimade" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/logo.png">
-		</div>
-		<div class="small-12 medium-6 large-2 columns" style="display: inline; text-align: center; padding-top: 10px">
-			<a href="#"><img class="logo-footer" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_fb.png" alt="Page Facebook" style="display: inline-block; margin-right: 5px;"></a>
-			<a href="#"><img class="logo-footer" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_twit.png" alt="Page Twitter" style="display: inline-block"></a>
-			<a href="#"><img class="logo-footer" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_vm.png" alt="Page Vimeo" style="display: inline-block; margin-left: 5px"></a>
-		</div>
-		<div class="small-12 large-4 columns end" style="padding-top: 10px">
-			<p id="text-footer"><a href="#"><span class="link-footer">CONTACT</span></a> - <a href="#"><span class="link-footer">MENTIONS LÉGALES</span></a><br />CRÉDITS @ LA CIMADE 2016 - TOUS DROITS RÉSERVÉS</p>
-		</div>
-	</div>
-</footer>
-<!-- Start Woopra Code -->
-<script>
+	</footer>
+	<!-- Start Woopra Code -->
+	<script>
 /*
 	function extractUrlParams(){ 
 		var t = document.location.search.substring(1).split('&'); var f = [];

@@ -133,6 +133,14 @@ a:hover
 	max-width: 70px;
 }
 
+.btn_share_fb
+{
+	padding: 20px;
+	width: 100%;
+	border: 2px solid white;
+	font-family: 'Audimat';
+	font-size: 25px;
+}
 /** {
 	background: #000 !important;
 	color: #0f0 !important;
