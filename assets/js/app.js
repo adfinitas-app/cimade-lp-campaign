@@ -25,6 +25,11 @@ $(document).ready(function()
 
 	/*RESIZE CENTER*/
 	$(window).resize(function() {
+		if($('#d-menu').hasClass('open')) {
+			$("#d-menu").removeClass("open");
+			$("#d-menu").slideToggle( "slow", function() {
+			});
+		}
 		AdaptHeader();
 		auto_height_adjust();
 		auto_text_adjust();
@@ -111,6 +116,7 @@ $(document).ready(function()
 
 		$img.bind('click', function() { $vid[0].play() });
 
+<<<<<<< HEAD
 		$vid.bind('play', function() {
 			$img.animate({opacity: 0}, 1000, 'linear', function() {
 				if($vid[0].playing) {
@@ -150,12 +156,141 @@ $(document).ready(function()
 		$("#text-accompagner").hide();
 		$("#text-denoncer").hide();
 	});
+=======
+$("#link-accompagner").hover(function() {
+	$("#text-accompagner").show();
+	$("#text-observer").hide();
+	$("#text-denoncer").hide();
+	$("#text-actions").hide();
+});
+$("#link-observer").hover(function() {
+	$("#text-observer").show();
+	$("#text-actions").hide();
+	$("#text-accompagner").hide();
+	$("#text-denoncer").hide();
+});
+$("#link-denoncer").hover(function() {
+	$("#text-denoncer").show();
+	$("#text-observer").hide();
+	$("#text-actions").hide();
+	$("#text-accompagner").hide();
+});
+$("#link-actions").hover(function() {
+	$("#text-actions").show();
+	$("#text-observer").hide();
+	$("#text-accompagner").hide();
+	$("#text-denoncer").hide();
+});
+
+
+
+
+>>>>>>> 8e6a9ec0db877e404e3cfafd3c2b24b8825edc5b
 });
 
 function AdaptHeader() {
 	var y = document.getElementById('header').clientHeight;
-	console.log("y == " + y);
 	var x = $(".text-header").css('height');
-	$('.block-header').css({"height" : y, "padding-top" : ((y - parseInt(x)) / 2)});
 	$('.block-header-r').css({"height" : y, "padding-top" : ((y - parseInt(x)) / 2)});
+	var x = $(".portrait-header").css('height');
+	$('.block-header').css({"height" : y, "padding-top" : "6px"});
+
 } 
+
+$("#button-burger").click(function() {
+	if($('#d-menu').hasClass('open')) {
+		$("#d-menu").removeClass("open");
+	}
+	$("#d-menu").slideToggle( "slow", function() {
+		$("#d-menu").addClass("open");
+	});
+});
+
+$(".close-d-menu").click(function() {
+	$("#d-menu").removeClass("open");
+	$("#d-menu").slideToggle( "slow", function() {
+	});
+});
+
+$("body").click(function() {
+	if($('#d-menu').hasClass('open')) {
+		$("#d-menu").removeClass("open");
+		$("#d-menu").slideToggle( "slow", function() {
+		});
+	}
+});
+
+
+var images = new Array();
+
+function 	preload() {
+	for (i = 0; i < preload.arguments.length; i++) {
+		images[i] = new Image();
+		images[i].src = preload.arguments[i];
+	}
+}
+
+preload("https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_elias.png",
+	"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_irena.png",
+	"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_zeinab.png"
+	);
+
+var description_teaser = ["Retrouvez le portrait d’Elias, 35 ans, syrien, bloqué à Calais.", 
+"Retrouvez le portrait d’Iréna, 30 ans, polonaise, ne parvenant pas à faire renouveler son titre de séjour.",
+"Retrouvez le portrait de Zeinab, 28 ans, de république démocratique du congo, en situation irrégulière depuis 5 ans."];
+
+var titre_teaser = ["À PARTIR DU 18 OCTOBRE",
+"À PARTIR DU 28 OCTOBRE",
+"À PARTIR DU 7 NOVEMBRE"];
+
+var bg_teaser = ["https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_elias.png",
+"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_irena.png",
+"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_zeinab.png"];
+
+$('.portrait-elias').click(function () {
+	changeTeaser(0);
+	scrollTo($('#contener-img-teaser'));
+});
+
+$('.portrait-irena').click(function () {
+	changeTeaser(1);
+	scrollTo($('#contener-img-teaser'));
+});
+
+$('.portrait-zeinab').click(function () {
+	changeTeaser(2);
+	scrollTo($('#contener-img-teaser'));
+});
+
+function changeTeaser(nb) {
+	$('#contener-img-teaser').css("background-image", "url(" + bg_teaser[nb] + ")");  
+	$('#titre-teaser').text(titre_teaser[nb]);
+	$('#description-teaser').text(description_teaser[nb]);
+}
+
+function 	scrollTo(next){
+	if ($(next).length != 0)
+	{
+		$('html, body').stop().animate({
+			scrollTop: $(next).offset().top + 1
+		}, 700, 'swing');
+		return false;
+	}
+};
+
+$('#container-button-video-demo').click(function () {
+	$('#container-button-video-demo').hide();
+	$('#video-container').show();
+	$('#container-video-demo').show();
+});
+
+
+
+
+
+
+
+
+
+
+
