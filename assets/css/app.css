@@ -26,6 +26,21 @@
 	font-style: normal;
 }
 
+.button.button-empty-bg {
+	width: 100%;
+	color: #FFFFFF;
+	padding: 20px 45px 20px 45px; 
+	background: rgba(255, 255, 255, 0);
+	border: 1px solid white;
+	border-radius: 5px; 
+	margin: 0 auto;
+}
+
+.button.button-empty-bg:hover {
+	background: rgba(255, 255, 255, 1);
+	color: black;
+}
+
 .portrait-header {
 	max-width: 50px;
 }
@@ -153,9 +168,35 @@
 		font-family: 'Helvetica';
 		font-weight: bold;
 		font-size: 14px;
+		color: #000000;
 	}
 
+	@media screen and (min-width: 640px) {
+		#slide-video-demo {
+			min-height: 100vh;
+		}
+	}
+
+	@media screen and (max-width: 840px) {
+
+		.portrait-header {
+			max-width: 40px;
+		}
+		.text-header {
+			font-size: 12px;
+		}
+	}
 	@media screen and (max-width: 640px) {
+
+		#slide-video-demo {
+			min-height: 0;
+		}
+
+		#container-video-demo,
+		.video-container {
+			display: none;
+		}
+
 		#footer {
 			padding-bottom: 5px;
 		}

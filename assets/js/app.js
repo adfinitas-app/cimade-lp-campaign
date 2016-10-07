@@ -24,6 +24,11 @@ $(document).ready(function()
 
 	//RESIZE CENTER
 	$(window).resize(function() {
+		if($('#d-menu').hasClass('open')) {
+			$("#d-menu").removeClass("open");
+			$("#d-menu").slideToggle( "slow", function() {
+			});
+		}
 		AdaptHeader();
 		$(".content").each(function(){vertical_center(this);});
 	});
@@ -82,11 +87,14 @@ $("#link-actions").hover(function() {
 	$("#text-accompagner").hide();
 	$("#text-denoncer").hide();
 });
+
+
+
+
 });
 
 function AdaptHeader() {
 	var y = document.getElementById('header').clientHeight;
-	console.log("y == " + y);
 	var x = $(".text-header").css('height');
 	$('.block-header-r').css({"height" : y, "padding-top" : ((y - parseInt(x)) / 2)});
 	var x = $(".portrait-header").css('height');
@@ -95,9 +103,28 @@ function AdaptHeader() {
 } 
 
 $("#button-burger").click(function() {
+	if($('#d-menu').hasClass('open')) {
+		$("#d-menu").removeClass("open");
+	}
+	$("#d-menu").slideToggle( "slow", function() {
+		$("#d-menu").addClass("open");
+	});
+});
+
+$(".close-d-menu").click(function() {
+	$("#d-menu").removeClass("open");
 	$("#d-menu").slideToggle( "slow", function() {
 	});
 });
+
+$("body").click(function() {
+	if($('#d-menu').hasClass('open')) {
+		$("#d-menu").removeClass("open");
+		$("#d-menu").slideToggle( "slow", function() {
+		});
+	}
+});
+
 
 var images = new Array();
 
@@ -125,17 +152,17 @@ var bg_teaser = ["https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-l
 "https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_irena.png",
 "https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_zeinab.png"];
 
-$('#portrait-elias').click(function () {
+$('.portrait-elias').click(function () {
 	changeTeaser(0);
 	scrollTo($('#contener-img-teaser'));
 });
 
-$('#portrait-irena').click(function () {
+$('.portrait-irena').click(function () {
 	changeTeaser(1);
 	scrollTo($('#contener-img-teaser'));
 });
 
-$('#portrait-zeinab').click(function () {
+$('.portrait-zeinab').click(function () {
 	changeTeaser(2);
 	scrollTo($('#contener-img-teaser'));
 });
@@ -155,6 +182,12 @@ function 	scrollTo(next){
 		return false;
 	}
 };
+
+$('#container-button-video-demo').click(function () {
+	$('#container-button-video-demo').hide();
+	$('.video-container').show();
+	$('#container-video-demo').show();
+});
 
 
 

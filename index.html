@@ -14,38 +14,39 @@
 			<img alt="Logo La Cimade" style="padding-top: 5px; padding-bottom: 5px" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/logo.png">
 		</div>
 		<div class="medium-9 large-7 columns show-for-medium" id="right-block-header" style="padding: 0">
-			<div class="medium-6 large-5 columns block-header" style="display: inline; text-align: center; 	background: #f1f1f1;">
+			<div class="medium-6 large-6 columns block-header" style="display: inline; text-align: center; 	background: #f1f1f1; padding: 0">
 				<p class="text-header" style="display: inline-block;">LES PORTRAITS:</p>
-				<button id="portrait-elias"><img class="portrait-header" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_e-off.png" style="display: inline-block;"></button>
-				<button id="portrait-irena"><img class="portrait-header" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_i-off.png" style="display: inline-block;"></button>
-				<button id="portrait-zeinab"><img class="portrait-header" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_z-off.png" style="display: inline-block;"></button>
+				<button class="portrait-elias"><img class="portrait-header" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_e-off.png" style="display: inline-block;"></button>
+				<button class="portrait-irena"><img class="portrait-header" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_i-off.png" style="display: inline-block;"></button>
+				<button class="portrait-zeinab"><img class="portrait-header" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_z-off.png" style="display: inline-block;"></button>
 			</div>
-			<div class="medium-3 large-3 columns block-header-r" style="max-width: 100%; margin: 0">
+			<a href="#"><div class="medium-3 large-3 columns block-header-r" style="max-width: 100%; margin: 0">
 				<p class="text-header">LES ACTIONS</p>
-			</div>
-			<div class="medium-3 large-3 columns end block-header-r" style="max-width: 100%; margin: 0">
-				<p class="text-header">LES COULISSES:</p>
-			</div>
+			</div></a>
+			<a href="#"><div class="medium-3 large-3 columns end block-header-r" style="max-width: 100%; margin: 0">
+				<p class="text-header">LES COULISSES</p>
+			</div></a>
 		</div>
 		<div class="small-2 end columns show-for-small-only">
+			<button id="button-burger-on" style="display: none"><img style="padding-top: 5px;" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/arrow-down.png"></button>
 			<button id="button-burger"><img style="padding-top: 5px" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/burger.png"></button>
 		</div>
 	</div>
 	<div id="d-menu" style="position: absolute; display: none; background: #f1f1f1; width: 100%; text-align: center;">
 		<p class="text-header">LES PORTRAITS:</p>
 		<div style="display: inline; text-align: center; background: #f1f1f1;">
-			<img style="padding-bottom: 10px" class="portrait-header-d" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_e-off.png" style="display: inline-block;">
-			<img style="padding-bottom: 10px" class="portrait-header-d" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_i-off.png" style="display: inline-block;">
-			<img style="padding-bottom: 10px" class="portrait-header-d" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_z-off.png" style="display: inline-block;">
+			<button class="portrait-elias close-d-menu"><img style="padding-bottom: 10px" class="portrait-header-d" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_e.png" style="display: inline-block;"></button>
+			<button class="portrait-irena close-d-menu"><img style="padding-bottom: 10px" class="portrait-header-d" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_i.png" style="display: inline-block;"></button>
+			<button class="portrait-zeinab close-d-menu"><img style="padding-bottom: 10px" class="portrait-header-d" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_logo_z.png" style="display: inline-block;"></button>
 		</div>
-		<div class="block-d-menu" style="width: 100%">
+		<a href="#" class="close-d-menu"><div class="block-d-menu" style="width: 100%">
 			<p style="margin: 0; padding: 10px" class="text-header" style="padding: 10px">LES ACTIONS</p>
-		</div>
-		<div class="block-d-menu" style="width: 100%">
+		</div></a>
+		<a href="#" class="close-d-menu"><div class="block-d-menu" style="width: 100%">
 			<p style="margin: 0; padding: 10px" class="text-header" style="padding: 10px">LES COULISSES</p>
-		</div>
+		</div></a>
 	</div>
-	<div class="row full" style="text-align: center; background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_bg_dark.png'); background-position: 50% 10%; background-size: cover; padding-bottom: 30px;">
+	<div class="row" id="slide-video-demo" style="max-width: 100%;text-align: center; background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_bg_dark.png'); background-position: 50% 10%; background-size: cover;">
 		<div class="large-10 large-centered columns">
 			<p style="color: #ee2e24; padding-top: 30px; font-family: 'Audimat Bold'; font-size: 42px; margin-bottom: 0; line-height: 45px;">BIENVENUE SUR MOVINGGESTURE</p>
 			<p style="text-transform: uppercase; font-size: 24px; color: white; font-family: 'Audimat'">Une campagne mobile interactive !</p>
@@ -53,10 +54,13 @@
 				Un geste de votre part peut leur permettre de franchir les obstacles…
 			</p>
 			<p style="color: white; font-size: 24px; font-family: 'Audimat'">Découvrez vite la vidéo démo et faites avancer la cause d’Elias, d’Iréna et de Zeinab.</p>
-			<div class="large-offset-2 large-8 end columns">
+			<div id="container-video-demo" class="large-offset-2 large-8 end columns" style="margin-top: 30px; margin-bottom: 40px;">
 				<div class="video-container">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/Du9zAaFluos" frameborder="0" allowfullscreen></iframe>
+					<iframe id="video-demo" width="560" height="315" src="https://www.youtube.com/embed/Du9zAaFluos" frameborder="0" allowfullscreen></iframe>
 				</div>
+			</div>
+			<div id="container-button-video-demo" class="show-for-small-only" style="padding: 0; margin: 0;">
+				<button id="button-video-demo" type="button" style="margin-bottom: 40px" class="button button-empty-bg"><span style="font-size: 24px; font-family: 'Audimat'">Voir la vidéo</span></button>
 			</div>
 		</div>
 	</div>
