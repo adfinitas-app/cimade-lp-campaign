@@ -221,7 +221,7 @@ function 	scrollTo(next){
 	}
 };
 
-$('#scroll_actions').click(function(){
+$('.scroll_actions').click(function(){
 	scrollTo($("#actions"));
 });
 
