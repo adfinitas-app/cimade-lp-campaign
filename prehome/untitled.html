@@ -1,0 +1,231 @@
+<!doctype html>
+<html class='no-js' lang='fr'>
+<head>
+	<meta charset='utf-8' />
+	<meta http-equiv='x-ua-compatible' content='ie=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+	<title>La Cimade</title>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css' />
+	<link rel='stylesheet' href='../assets/css/app.css' type='text/css'/>
+	<style>
+		#prehome-15 {
+			position: fixed;
+			width: 100%;
+			top: 0px;
+			z-index: 99999;
+			min-height: 100%;
+			padding: 0px 0px 60px;
+			background-color: black;
+			background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_prehome_bg.png');
+			background-position: left;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		#prehome-15 .prehome-container {
+			margin-left: 0%;
+		}
+
+		#prehome-15 .prehome-container {
+			text-align: center;
+		}
+
+		#prehome-15 .button {
+			background-color: #f2361a;
+			text-transform: uppercase;
+			padding: 10px 45px;
+			font-size: 23px;
+			color: white;
+			font-weight: bold;
+		}
+
+		#prehome-15 p {
+			font-weight: 300;
+			color: white;
+			font-size: 18px;
+			margin: 50px;
+		}
+
+
+		/*body #prehome {font-size: 0.0001px;text-align: center;} #prehome:before {content: '';display: inline-block;vertical-align: middle;height: 100%;} #prehome .prehome-container {display: inline-block;font-size: 1rem;vertical-align: middle;}*/
+
+
+		/*#prehome .prehome-container {position: relative;display: inline-block;top: 50%;left: 50%;transform: translate(-50%, -50%);}*/
+
+		#prehome-15 {
+			display: flex;
+			justify-content: center;
+		}
+
+		#prehome-15 .prehome-container {
+			align-self: center;
+		}
+
+		@media only screen and (max-width: 700px) {
+			#prehome-15 .prehome-container {
+				margin-left: 0% !important;
+				;
+			}
+		}
+
+		#prehome-15 .close {
+			position: absolute;
+			top: 5%;
+			right: 5%;
+			background: 0!important
+		}
+
+		.reveal {
+			transition: opacity 0.5s linear;
+		}
+
+		#prehome-15 form input[type='text'] {
+			display: block;
+			border: 0;
+			margin: 0 auto;
+			margin-bottom: 15px;
+			width: 325px;
+			height: 42px;
+			padding: 8px;
+		}
+
+		#prehome-15 form input[type='text']:last-child {
+			margin-bottom: 55px;
+		}
+
+		#prehome-15 .title p {
+			font-size: 50px;
+			margin: 10px 0px;
+			font-family: 'nudista-web';
+			text-transform: uppercase;
+		}
+
+		#prehome-15 .red {
+			color: #f2361a;
+			margin-bottom: 10px;
+		}
+
+		#text-prehome {
+			font-weight: bold;
+			!important;
+			margin: 50px;
+			max-width: 525px;
+		}
+
+		@media only screen and (max-width: 400px) {
+			#prehome-15 .title p {
+				font-size: 35px !important;
+			}
+			#prehome-15 form input [type='text'] {
+				width: intial;
+			}
+		}
+
+		#prehome-15.hide {
+			visibility: hidden;
+			opacity: 0;
+			transition: visibility 0s linear 1s, opacity 1s;
+		}
+
+		@font-face {
+			font-family: 'Audimat';
+			src: url('/assets/fonts/AUdimat-Regular.otf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'Audimat Bold';
+			src: url('/assets/fonts/AUdimat-Bold.otf') format('truetype');
+			font-weight: bold;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'UniversLTStd';
+			src: url('/assets/fonts/UniversLTStd.otf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'UniversLTStd Bold';
+			src: url('/assets/fonts/UniversLTStd-Bold.otf') format('truetype');
+			font-weight: bold;
+			font-style: normal;
+		}
+
+		.pre_title {
+			font-family: 'Audimat Bold';
+			font-size: 50px;
+			color: #f0473f;
+			text-transform: uppercase;
+			text-align: center;
+			line-height: 1;
+		}
+
+		.pre_subtitle {
+			font-family: 'Audimat';
+			font-size: 27px;
+			color: white;
+			text-align: center;
+			line-height: 1;
+			margin-bottom: 20px;
+		}
+
+		.pre_text {
+			font-family: 'UniversLTStd';
+			font-size:15px;
+			color: white;
+			text-align: center;
+			line-height: 1;
+		}
+
+		#btn_decouvre {
+			margin-top: 30px;
+			margin-bottom: 20px;
+			color:white;
+			font-family: 'AUdimat';
+			font-size: 18px;
+			border: 2px solid white;
+			padding: 13px;
+			padding-right: 18px;
+			padding-left: 18px;
+			display: inline-block;
+			text-align: center;
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			-ms-transition: all .2s ease-in-out;
+
+		}
+		#btn_decouvre:hover {
+			background-color: white;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<div style='height: 100vh; width: 100%; position: relative'>
+		<div class='prehome-container' style='position: absolute; bottom: 0; width: 100%;'>
+			<a href='http://www.lacimade.org/?utm_source=LP-MG&utm_medium=LP&utm_campaign=MG16' target='_blank' style='text-align: center'>
+				<p><img id='pre_logo' class='logo' alt='Logo La Cimade' style='padding-top: 5px; padding-bottom: 10px; display: inline-block;' src='https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_prehome_logo.png'></p>
+			</a>
+			<p>
+				<h1 class='pre_title' style='opacity:0;'>Movinggesture</h1>
+				<h2 class='pre_subtitle' style='opacity:0;'>Une campagne mobile interactive</h2>
+				<p class='pre_text' style='opacity:0;'>Découvrez le parcours d’Elias, Iréna et Zeinab.<br>
+					Aidez les à franchir les obstacles et à poursuivre l’histoire.<br>
+					<button id='btn_decouvre' style='opacity:0;'>Je découvre MovingGesture</button>
+				</p>	
+			</p>	
+		</div>
+	</div>
+	<a class='close' href='#'><img id='close-prehome' src='https://s3.amazonaws.com/heroku-adfinitas-campaign/lacimade-enrichissement/prehome/close.png' alt='close'></a>
+	<script src='https://www.youtube.com/iframe_api'></script>
+	<script src='http://code.jquery.com/jquery.min.js' type='text/javascript'></script>
+	<script src='../assets/js/app.js' type='text/javascript'></script>
+	<script src='../assets/js/woopra.js' type='text/javascript'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js' type='text/javascript'></script>
+</body>
+</html>
