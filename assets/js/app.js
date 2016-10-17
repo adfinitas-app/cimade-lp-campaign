@@ -195,6 +195,7 @@ var bg_teaser = ["https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-l
 "https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_irena.png",
 "https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_zeinab.png"];
 
+
 $('.portrait-elias').click(function () {
 	changeTeaser(0);
 	scrollTo($('#contener-img-teaser'));
