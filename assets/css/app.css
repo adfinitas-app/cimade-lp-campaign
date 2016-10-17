@@ -126,6 +126,18 @@ a:hover
 	color: black;
 }
 
+.button-empty-bg.don {
+	width: 80%;
+	padding: 15px 20px 15px 20px; 
+	font-size: 12px;
+	border: 1px solid #ee2e24;
+	color: #ee2e24;
+}
+
+.button-empty-bg.don:hover {
+	border: 1px solid #000000;
+}
+
 .portrait-header {
 	max-width: 50px;
 }
