@@ -184,7 +184,7 @@ preload("https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaig
 	);
 
 var description_teaser = ["Retrouvez le portrait d’Elias, 35 ans, syrien, bloqué à Calais.", 
-"Retrouvez le portrait d’Iréna, 30 ans, polonaise, ne parvenant pas à faire renouveler son titre de séjour.",
+"Retrouvez le portrait d’Iréna, 30 ans, ukrainienne, ne parvenant pas à faire renouveler son titre de séjour.",
 "Retrouvez le portrait de Zeinab, 28 ans, de république démocratique du congo, en situation irrégulière depuis 5 ans."];
 
 var titre_teaser = ["À PARTIR DU 18 OCTOBRE",
