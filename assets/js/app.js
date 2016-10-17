@@ -135,9 +135,14 @@ function AdaptHeader() {
 	var y = document.getElementById('header').clientHeight;
 	var x = $(".text-header").css('height');
 	$('.block-header-r').css({"height" : y, "padding-top" : ((y - parseInt(x)) / 2)});
-	var x = $(".portrait-header").css('height');
+	x = $(".portrait-header").css('height');
 	$('.block-header').css({"height" : y, "padding-top" : "6px"});
-
+	x = $(".button-don-header").css('height');
+	$('.block-don').css({"height" : y, "padding-top" : ((y - parseInt(x)) / 2)});
+    var $img = $('#logo');
+    	$img.on('load', function(){
+	    	$('#div-logo').css({"height" : y, "padding-top" : ((y - parseInt($(this).height())) / 2)});
+	    });
 } 
 
 $("#button-burger").click(function() {
