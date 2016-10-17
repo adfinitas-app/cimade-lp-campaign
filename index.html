@@ -84,32 +84,6 @@
 			</div>
 		</div>
 	</div>
-	
-	<script>
-		var player, playing = false;
-		function onYouTubeIframeAPIReady() {
-			player = new YT.Player('video-container', {
-				height: '500',
-				width: '800',
-				videoId: 'Du9zAaFluos',
-				events: {
-					'onStateChange': onPlayerStateChange
-				}
-			});
-		}
-
-		function onPlayerStateChange(event) {
-			if(!playing){
-				playing = true;
-				woopra.track('interaction', {
-					category: "demo-MG16",
-					action: "clic",
-					url: document.location.href,
-					title: document.title
-				});      
-			}
-		}
-	</script>
 	<div id="contener-img-teaser" class="row" style="max-width:100%; padding-top: 130px; padding-bottom: 80px; background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_elias.png'); background-position: 50% 10%; background-size: cover">
 		<div class="small-centered small-11 medium-10 large-offset-2 large-7 columns">
 			<div style="background: #373a4d; width: 350px; text-align: center">
