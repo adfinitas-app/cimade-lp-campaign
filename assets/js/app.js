@@ -129,7 +129,7 @@ $("#link-actions").hover(function() {
 });
 
 var 	text = ["<p>La Cimade dénonce par voie de presse et au travers de ces publications les violations des droits fondamentaux des migrants bloqués aux frontières de l’Union Européenne.</p>",
-"<p>La Cimade conduit des missions d’observation aux frontières comme à Calais, Ceuta et Melilla, en Italie et en Sicile. Les informations récoltées durant ces missions nourrissent des actions de plaidoyers auprès des pouvoirs publics. (rapport défense d’entrer)</p>",
+"<p>La Cimade conduit des missions d’observation aux frontières comme à Calais, Ceuta et Melilla, en Italie et en Sicile. Les informations récoltées durant ces missions nourrissent des actions de plaidoyers auprès des pouvoirs publics.</p>",
 "<p>D’autre part, avec ses partenaires internationaux, la Cimade travaille à l’élaboration d’analyses et de revendications communes, portées devant les gouvernements et les opinions publiques. (ceuta et mellia les portes + journée de décryptages..)</p>",
 "<p>Présente dans x  centres de rétention, La Cimade offre un accompagnement juridique pour les étrangers interpellés, notamment à Calais. Elle dénonce régulièrement des privations de liberté abusives et illégales. </p><p>A Grande-Synthe, situé à 40 kilomètres de Calais, un campement humanitaire a été installé. La Cimade a mis en place une permanence juridique pour informer, orienter et soutenir les migrants dans leurs démarches administratives.</p>"];
 
