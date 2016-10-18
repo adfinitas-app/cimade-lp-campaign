@@ -61,6 +61,22 @@ a:hover
 	line-height: 1.2;
 }
 
+.text_slide_choice
+{
+	font-family: 'Audimat Bold';
+	line-height: 0.5;
+	width: 150px;
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	text-transform: uppercase;
+	color: #868aa1;
+	text-align: right;
+	padding-right: 10px;
+	font-size: 24px;
+}
+
 .img_title
 {
 	font-family: 'Audimat';
@@ -100,6 +116,14 @@ a:hover
 	color: white;
 	line-height: 1;
 	background-color: #f0473f;
+}
+
+#slider
+{
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
 }
 
 .img_text_container_small
@@ -216,6 +240,35 @@ a:hover
 		max-height: 400px;
 	}
 
+	.container-video-portrait {
+		margin-left: 150px;
+	}
+
+	.container-video-portrait-small {
+		margin-bottom: 40px;
+	}
+	.container-video-portrait,
+	.container-video-portrait-small {
+		position: relative;
+		padding-bottom: 50.25%;
+		padding-top: 30px;
+		height: 0;
+		overflow: hidden;
+	}
+	.container-video-portrait iframe,
+	.container-video-portrait-small iframe,
+	.container-video-portrait object,
+	.container-video-portrait-small object,
+	.container-video-portrait embed,
+	.container-video-portrait-small embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		max-height: 400px;
+	}
+
 	/*GLOBAL*/
 	button:focus {outline:0;}
 
@@ -285,6 +338,11 @@ a:hover
 	.logo-footer {
 		width: 40px;
 	}
+	#agir_s {
+
+		display: none;
+	}
+
 	.block-header-r {
 		background: #f1f1f1;
 		text-align: center;
@@ -325,6 +383,11 @@ a:hover
 	{
 		width: 10%;
 		margin-bottom: 8px;
+	}
+
+	.titre-portrait {
+		background: #373a4d; 
+		padding-left: 30px;
 	}
 
 	@media screen and (max-width: 2200px)
@@ -438,7 +501,31 @@ a:hover
 		}
 	}
 
+	@media screen and (min-width: 640px) {
+		.global-c-v-p {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 530px) {
+		#agir_l { display: none; }
+		#agir_s { display: block; }
+	}
+
 	@media screen and (max-width: 1010px) {
+		.block-portrait {
+			text-align: center;
+		}
+		.titre-portrait {
+			margin-top: 30px;
+			text-align: center;
+		}
+		.container-video-portrait {
+			text-align: center;
+		}
+		.container-video-portrait {
+			margin-left: 0;
+		}
 		#text-footer {
 			text-align: center;;
 		}
