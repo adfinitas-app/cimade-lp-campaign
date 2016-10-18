@@ -340,8 +340,8 @@ var description_teaser = ["Retrouvez le portrait d’Elias, 35 ans, syrien, bloq
 "Retrouvez le portrait de Zeinab, 28 ans, de république démocratique du congo, en situation irrégulière depuis 5 ans."];
 
 var titre_teaser = ["À PARTIR DU 18 OCTOBRE",
-"À PARTIR DU 28 OCTOBRE",
-"À PARTIR DU 7 NOVEMBRE"];
+"À PARTIR DU 7 NOVEMBRE",
+"À PARTIR DU 28 OCTOBRE"];
 
 var bg_teaser = ["https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_elias.png",
 "https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_irena.png",
