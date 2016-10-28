@@ -420,7 +420,6 @@ function changePortrait(nb) {
 	$('#titre-portrait').html(titre_portrait[nb]);
 	$('#description-portrait').html(description_portrait[nb]);
 	$('#video-portrait').attr("src", vidlink_portrait[nb]);
-	console.log(name_portrait[nb]);
 	$('#nom-portrait').text(name_portrait[nb]);
 	refresh_view();
 	refresh_others();
