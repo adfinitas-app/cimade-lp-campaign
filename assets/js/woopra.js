@@ -8,7 +8,14 @@ player1.on('play', function() {
 var player2 = new Vimeo.Player(iframe2);
 player2.on('play', function() {
 	check2 = false;
-	woopra.track('interaction', {category:"video-elias-MG16",action:"clic",url:document.location.href,title: document.title});
+	if ($('#video-portrait').attr("src") == "https://player.vimeo.com/video/187147885") {
+		console.log("ELIAS");
+		woopra.track('interaction', {category:"video-elias-MG16",action:"clic",url:document.location.href,title: document.title});
+	}
+	else if ($('#video-portrait').attr("src") == "https://player.vimeo.com/video/188299089") {
+		console.log("ZEINAB");
+		woopra.track('interaction', {category:"video-zeinabs-MG16",action:"clic",url:document.location.href,title: document.title});
+	}
 });
 
 $('.bouton-don-header').click(function(){

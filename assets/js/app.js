@@ -128,10 +128,22 @@ $("#link-actions").hover(function() {
 	$("#text-denoncer").hide();
 });
 
-var 	text = ["<p>La Cimade dénonce par voie de presse et au travers de ces publications les violations des droits fondamentaux des migrants bloqués aux frontières de l’Union Européenne.</p>",
+var 	cur_act = 1;
+
+var 	text_title = [["dénoncer", "observer", "analyser", "accompagner"], ["défendre", "denoncer", "accueillir", "analyser"]];
+
+var 	largest_text = ["<p>Présente dans 8 centres de rétention, La Cimade offre un accompagnement juridique pour les étrangers interpellés, notamment à Calais. Elle dénonce régulièrement des privations de liberté abusives et illégales. </p><p>A Grande-Synthe, situé à 40 kilomètres de Calais, un campement humanitaire a été installé. La Cimade a mis en place une permanence juridique pour informer, orienter et soutenir les migrants dans leurs démarches administratives.</p>",
+"<p>La cimade dénonce régulièrement les conditions indignes d’accès au travail  des migrants et particulièrement des femmes. Depuis 2009, La Cimade a renforcé ses actions de plaidoyer pour la reconnaissance des droits des travailleurs sans papier en France.</p>",
+"<p>Présente dans 8 centres de rétention, La Cimade offre un accompagnement juridique pour les étrangers interpellés, notamment à Calais. Elle dénonce régulièrement des privations de liberté abusives et illégales. </p><p>A Grande-Synthe, situé à 40 kilomètres de Calais, un campement humanitaire a été installé. La Cimade a mis en place une permanence juridique pour informer, orienter et soutenir les migrants dans leurs démarches administratives.</p>"];
+
+var 	text = [["<p>La Cimade dénonce par voie de presse et au travers de ces publications les violations des droits fondamentaux des migrants bloqués aux frontières de l’Union Européenne.</p>",
 "<p>La Cimade conduit des missions d’observation aux frontières comme à Calais, Ceuta et Melilla, en Italie et en Sicile. Les informations récoltées durant ces missions nourrissent des actions de plaidoyers auprès des pouvoirs publics.</p>",
 "<p>D’autre part, avec ses partenaires internationaux, la Cimade travaille à l’élaboration d’analyses et de revendications communes, portées devant les gouvernements et les opinions publiques.</p>",
-"<p>Présente dans 8 centres de rétention, La Cimade offre un accompagnement juridique pour les étrangers interpellés, notamment à Calais. Elle dénonce régulièrement des privations de liberté abusives et illégales. </p><p>A Grande-Synthe, situé à 40 kilomètres de Calais, un campement humanitaire a été installé. La Cimade a mis en place une permanence juridique pour informer, orienter et soutenir les migrants dans leurs démarches administratives.</p>"];
+"<p>Présente dans 8 centres de rétention, La Cimade offre un accompagnement juridique pour les étrangers interpellés, notamment à Calais. Elle dénonce régulièrement des privations de liberté abusives et illégales. </p><p>A Grande-Synthe, situé à 40 kilomètres de Calais, un campement humanitaire a été installé. La Cimade a mis en place une permanence juridique pour informer, orienter et soutenir les migrants dans leurs démarches administratives.</p>"],
+["<p>La Cimade, dans ses permanences, défend les personnes victimes d’exploitation par le travail et d’autres formes de traites des êtres humains.</p>",
+"<p>La cimade dénonce régulièrement les conditions indignes d’accès au travail  des migrants et particulièrement des femmes. Depuis 2009, La Cimade a renforcé ses actions de plaidoyer pour la reconnaissance des droits des travailleurs sans papier en France.</p>",
+"<p>La Cimade a par ailleurs mis en place des permanences spécifiques pour les femmes migrantes.</p>",
+"<p>La Cimade participe à des consultations organisées par les pouvoirs publics visant à améliorer les conditions des femmes étrangères.</p>"]];
 
 function 		calc_box_height()
 {
@@ -140,7 +152,7 @@ function 		calc_box_height()
 
 	save = $("#text_container").html();
 
-	$("#text_container").html(text[3]);
+	$("#text_container").html(largest_text[0]);
 	height = $("#text_container").height();
 	$("#text_container").html(save);
 	return (height);
@@ -154,35 +166,34 @@ function 		set_box_height()
 	$("#text_container").css({"height" : calc_box_height()});
 }
 
-$("#denoncer").hover(function()
+$("#title_1").hover(function()
 {
 	$("#cursor").stop().animate({"padding-top" : "3px"}, 100);
 	$(this).parent().children().children().css({"color" : "#868aa1"});
 	$(this).children().css({"color" : "white"});
-	$("#text_container").html(text[0]);
+	$("#text_container").html(text[cur_act][0]);
 });
 
-$("#observer").hover(function()
+$("#title_2").hover(function()
 {
 	$("#cursor").stop().animate({"padding-top" : "32px"}, 100);
 	$(this).parent().children().children().css({"color" : "#868aa1"});
 	$(this).children().css({"color" : "white"});
-	$("#text_container").html(text[1]);
+	$("#text_container").html(text[cur_act][1]);
 });
-$("#analyser").hover(function()
+$("#title_3").hover(function()
 {
 	$("#cursor").stop().animate({"padding-top" : "60px"}, 100);
 	$(this).parent().children().children().css({"color" : "#868aa1"});
 	$(this).children().css({"color" : "white"});
-	$("#text_container").html(text[3]);
-	$("#text_container").html(text[2]);
+	$("#text_container").html(text[cur_act][2]);
 });
-$("#accompagner").hover(function()
+$("#title_4").hover(function()
 {
 	$("#cursor").stop().animate({"padding-top" : "88px"}, 100);
 	$(this).parent().children().children().css({"color" : "#868aa1"});
 	$(this).children().css({"color" : "white"});
-	$("#text_container").html(text[3]);
+	$("#text_container").html(text[cur_act][3]);
 });
 
 var 	cur_slide;
@@ -214,7 +225,6 @@ $("#cursor_right").click(function()
 	var 	pos;
 
 	pos = parseInt($('#slider').css('transform').split(',')[4]);
-	console.log($('#slider').css('transform'));
 	if (cur_slide != 3)
 	{	
 		pos -= 200;
@@ -237,43 +247,58 @@ function 	select_bar()
 		{		
 			$(this).children().css({"color" : "white", "font-size" : "36px"});
 			$(this).css({ borderBottom: "3px solid white"});
-			console.log($(this))
 		}
 		count++;
 	});
 }
 
-$("#denoncer_s").click(function(){
+$("#title_1_s").click(function(){
 	cur_slide = 0;
 	$("#slider").css({"transform": "translateX(0px)"});
 	select_bar();
 	refresh_slide();
 });
 
-$("#observer_s").click(function(){
+$("#title_2_s").click(function(){
 	cur_slide = 1;
 	$("#slider").css({"transform": "translateX(-200px)"});
 	select_bar();
 	refresh_slide();
 });
 
-$("#analyser_s").click(function(){
+$("#title_3_s").click(function(){
 	cur_slide = 2;
 	$("#slider").css({"transform": "translateX(-400px)"});
 	select_bar();
 	refresh_slide();
 });
 
-$("#accompagner_s").click(function(){
+$("#title_4_s").click(function(){
 	cur_slide = 3;
 	$("#slider").css({"transform": "translateX(-600px)"});
 	select_bar();
 	refresh_slide();
 });
+
+function  	refresh_view()
+{
+	var 	a;
+
+	a = 1;
+	while (a <= 4)
+	{
+		$("#title_" + a + " > p").html(text_title[cur_act][a - 1]);
+		$("#title_" + a + "_s > p").html(text_title[cur_act][a - 1]);
+		a++;
+	}
+	$("#text_container").html(text[cur_act][cur_slide]);
+	refresh_slide();
+}
+
 function 	refresh_slide()
 {
 	$("#slider")
-	$("#text_container_s").html(text[cur_slide]);
+	$("#text_container_s").html(text[cur_act][cur_slide]);
 	$("#cursor_left").css("opacity","1");
 	$("#cursor_right").css("opacity","1");
 	if (cur_slide == 0)
@@ -320,7 +345,6 @@ $("body").click(function() {
 	}
 });
 
-
 var images = new Array();
 
 function 	preload() {
@@ -330,41 +354,57 @@ function 	preload() {
 	}
 }
 
-preload("https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_elias.png",
-	"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_irena.png",
-	"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_zeinab.png"
+preload("https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_irena.png",
+	"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/bg-zeinab.jpg",
+	"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/portrait-e.png"
 	);
 
+var titre_portrait = ["Elias, 35 ans, syrien, bloqué à Calais.",
+"Zeinab, 28 ans, de république démocratique du congo est en situation irrégulière depuis 5 ans."];
+
+var description_portrait = ['<span style="font-weight: bold">Elias ne parvient pas à rejoindre l’Angleterre</span> où il désire effectuer sa demande d’asile et <span style="font-weight: bold">où résident déjà sa femme et ses enfants.</span> Pris dans une rafle en octobre 2015, <span style="font-weight: bold">Elias a été conduit dans en centre de rétention administrative</span> puis, libéré quelques jours plus tard, il est retourné à Calais pour tenter de nouveau le passage.</p>',
+'Elle est obligée de travailler au noir pour survivre et <span style="font-weight:bold">est exploitée la plupart du temps</span>. Dépourvue de fiche de paies elle n’arrive pas à obtenir des papiers en tant que salariée.'];
+
+var bg_portrait = ["https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_elias.png",
+"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/bg-zeinab.jpg",
+"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/bg-irena.jpg"];
+
+var vidlink_portrait = ["https://player.vimeo.com/video/187147885",
+"https://player.vimeo.com/video/188299089"];
+
 var description_teaser = ["Retrouvez le portrait d’Elias, 35 ans, syrien, bloqué à Calais.", 
-"Retrouvez le portrait d’Iréna, 30 ans, ukrainienne, ne parvenant pas à faire renouveler son titre de séjour.",
-"Retrouvez le portrait de Zeinab, 28 ans, de république démocratique du congo, en situation irrégulière depuis 5 ans."];
+"Retrouvez le portrait de Zeinab, 28 ans, de république démocratique du congo, en situation irrégulière depuis 5 ans.",
+"Retrouvez le portrait d’Iréna, 30 ans, ukrainienne, ne parvenant pas à faire renouveler son titre de séjour.",];
 
 var titre_teaser = ["À PARTIR DU 18 OCTOBRE",
-"À PARTIR DU 7 NOVEMBRE",
-"À PARTIR DU 28 OCTOBRE"];
+"À PARTIR DU 28 OCTOBRE",
+"À PARTIR DU 7 NOVEMBRE"];
 
 var bg_teaser = ["https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_elias.png",
-"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_irena.png",
-"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_zeinab.png"];
+"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_zeinab.png",
+"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_irena.png"];
+
+var portrait_other = ["https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/portrait-e.png",
+"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/portrait-z.png",
+"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/portrait-i.png"];
+
+var name_portrait= ["Elias", "Zeinab", "Irena"];
 
 $('.portrait-elias').click(function () {
-//	changeTeaser(0);
-scrollTo($('#slide-portrait'));
-});
-
-$('.portrait-irena').click(function () {
-	changeTeaser(1);
-	$('#block-teaser').removeClass('large-offset-1 end');
-	$('#block-teaser').addClass('large-offset-6');
-	$('#contener-img-teaser').css("background-position","10% 30%");
-	scrollTo($('#contener-img-teaser'));
+	changePortrait(0);
+	scrollTo($('#slide-portrait'));
 });
 
 $('.portrait-zeinab').click(function () {
+	changePortrait(1);
+	scrollTo($('#slide-portrait'));
+});
+
+$('.portrait-irena').click(function () {
 	changeTeaser(2);
-	$('#block-teaser').removeClass('large-offset-6')
-	$('#block-teaser').addClass('large-offset-1 end')
-	$('#contener-img-teaser').css("background-position","90% 30%");
+	$('#block-teaser').removeClass('large-offset-1 end');
+	$('#block-teaser').addClass('large-offset-6');
+	$('#contener-img-teaser').css("background-position","10% 30%");
 	scrollTo($('#contener-img-teaser'));
 });
 
@@ -373,6 +413,41 @@ function changeTeaser(nb) {
 	$('#titre-teaser').text(titre_teaser[nb]);
 	$('#description-teaser').text(description_teaser[nb]);
 }
+
+function changePortrait(nb) {
+	cur_act = nb
+	$('#slide-portrait').css("background-image", "url(" + bg_teaser[nb] + ")");  
+	$('#titre-portrait').html(titre_portrait[nb]);
+	$('#description-portrait').html(description_portrait[nb]);
+	$('#video-portrait').attr("src", vidlink_portrait[nb]);
+	console.log(name_portrait[nb]);
+	$('#nom-portrait').text(name_portrait[nb]);
+	refresh_view();
+	refresh_others();
+}
+
+function refresh_others()
+{
+	if (cur_act == 0)
+	{
+		$('#name-others').html("de Zeinab");
+		$("#other_portrait").attr("src", portrait_other[1]);
+	}
+	else
+	{
+		$('#name-others').html("d'Elias");
+		$("#other_portrait").attr("src", portrait_other[0]);
+	}	
+}
+
+$("#other_portrait").click(function()
+{
+	if (cur_act == 0)
+		changePortrait(1);
+	else
+		changePortrait(0);
+	scrollTo("#slide-portrait");
+});
 
 function 	scrollTo(next){
 	if ($(next).length != 0)
@@ -386,6 +461,10 @@ function 	scrollTo(next){
 
 $('.scroll_actions').click(function(){
 	scrollTo($("#actions"));
+});
+
+$('.scroll_coulisse').click(function(){
+	scrollTo($("#coulisse"));
 });
 
 $('#container-button-video-demo').click(function () {
@@ -409,7 +488,6 @@ jQuery('.vimeo-player').each(function(){
 });
 
 function ready(playerID){
-	console.log("HHIII");
 	Froogaloop(playerID).addEvent('play', function(data) {
 		play(playerID);
 	});
