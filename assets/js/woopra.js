@@ -1,20 +1,19 @@
 var iframe1 = document.querySelector('#video-demo');
-var iframe2 = document.querySelector('#video-portrait');
+var iframe2 = document.querySelector('.video-portrait');
 var player1 = new Vimeo.Player(iframe1);
 player1.on('play', function() {
-	check1 = false;
 	woopra.track('interaction', {category:"demo-MG16",action:"clic",url:document.location.href,title: document.title});
 });
 var player2 = new Vimeo.Player(iframe2);
 player2.on('play', function() {
-	check2 = false;
-	if ($('#video-portrait').attr("src") == "https://player.vimeo.com/video/187147885") {
-		console.log("ELIAS");
+	if ($('.video-portrait').attr("src") == "https://player.vimeo.com/video/187147885") {
 		woopra.track('interaction', {category:"video-elias-MG16",action:"clic",url:document.location.href,title: document.title});
 	}
-	else if ($('#video-portrait').attr("src") == "https://player.vimeo.com/video/188299089") {
-		console.log("ZEINAB");
+	else if ($('.video-portrait').attr("src") == "https://player.vimeo.com/video/188299089") {
 		woopra.track('interaction', {category:"video-zeinabs-MG16",action:"clic",url:document.location.href,title: document.title});
+	}
+	else if ($('.video-portrait').attr("src") == "https://player.vimeo.com/video/190226396") {
+		woopra.track('interaction', {category:"video-irena-MG16",action:"clic",url:document.location.href,title: document.title});
 	}
 });
 

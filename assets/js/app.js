@@ -89,7 +89,6 @@ function	valignBlockPortait() {
 
 	y = $('#block-video-portrait').height();
 	x = $('#block-portrait').height();
-
 	if ($(window).width() > 1025) {
 		if (margin < 370) {
 			$('#block-portrait').css({"margin-top" : ((y - parseInt(x)))});
@@ -130,7 +129,7 @@ $("#link-actions").hover(function() {
 
 var 	cur_act = 1;
 
-var 	text_title = [["dénoncer", "observer", "analyser", "accompagner"], ["défendre", "denoncer", "accueillir", "analyser"]];
+var 	text_title = [["dénoncer", "observer", "analyser", "accompagner"], ["défendre", "denoncer", "accueillir", "analyser"], ["accompagner", "observer", "dénoncer", "défendre"]];
 
 var 	largest_text = ["<p>Présente dans 8 centres de rétention, La Cimade offre un accompagnement juridique pour les étrangers interpellés, notamment à Calais. Elle dénonce régulièrement des privations de liberté abusives et illégales. </p><p>A Grande-Synthe, situé à 40 kilomètres de Calais, un campement humanitaire a été installé. La Cimade a mis en place une permanence juridique pour informer, orienter et soutenir les migrants dans leurs démarches administratives.</p>",
 "<p>La cimade dénonce régulièrement les conditions indignes d’accès au travail  des migrants et particulièrement des femmes. Depuis 2009, La Cimade a renforcé ses actions de plaidoyer pour la reconnaissance des droits des travailleurs sans papier en France.</p>",
@@ -143,7 +142,11 @@ var 	text = [["<p>La Cimade dénonce par voie de presse et au travers de ces pub
 ["<p>La Cimade, dans ses permanences, défend les personnes victimes d’exploitation par le travail et d’autres formes de traites des êtres humains.</p>",
 "<p>La cimade dénonce régulièrement les conditions indignes d’accès au travail  des migrants et particulièrement des femmes. Depuis 2009, La Cimade a renforcé ses actions de plaidoyer pour la reconnaissance des droits des travailleurs sans papier en France.</p>",
 "<p>La Cimade a par ailleurs mis en place des permanences spécifiques pour les femmes migrantes.</p>",
-"<p>La Cimade participe à des consultations organisées par les pouvoirs publics visant à améliorer les conditions des femmes étrangères.</p>"]];
+"<p>La Cimade participe à des consultations organisées par les pouvoirs publics visant à améliorer les conditions des femmes étrangères.</p>"],
+["<p>La cimade est présente dans 131 permanences juridiques sur toute la France. Elle accompagne et oriente 170.000 personnes chaque année dans leurs démarches administratives.</p>",
+"<p>La Cimade observe les conditions d’accès aux préfectures et aux procédures et dénonce dans les médias et les pouvoirs publics les dysfonctionnements et obstacles rencontrés par les personnes</p>",
+"<p>La Cimade mène des actions de plaidoyers auprès des parlementaires et pouvoirs publics pour obtenir des améliorations de la législation relative aux droits des étrangers en France.</p>",
+"<p>La Cimade mène des actions juridiques pour rétablir les personnes dans leurs droits et obtenir la condamnation des pratiques illégales de certaines préfectures.</p>"]];
 
 function 		calc_box_height()
 {
@@ -313,7 +316,7 @@ function AdaptHeader() {
 	$('.block-header-r').css({"height" : y, "padding-top" : ((y - parseInt(x)) / 2)});
 	x = $(".portrait-header").css('height');
 	$('.block-header').css({"height" : y, "padding-top" : "6px"});
-	var x = $(".button-don-header").css('height');
+	x = $(".button-don-header").css('height');
 	$('.block-don').css({"height" : y, "padding-top" : ((y - parseInt(x)) / 2)});
 
 	var $img = $('#logo');
@@ -355,30 +358,27 @@ function 	preload() {
 }
 
 preload("https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_irena.png",
-	"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/bg-zeinab.jpg",
-	"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/portrait-e.png"
+	"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/bg-zeinab.png",
+	"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/bg-elias.png",
+	"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/portrait-e.png",
+	"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/bg-irena.png"
 	);
 
 var titre_portrait = ["Elias, 35 ans, syrien, bloqué à Calais.",
-"Zeinab, 28 ans, de république démocratique du congo est en situation irrégulière depuis 5 ans."];
+"Zeinab, 28 ans, de république démocratique du congo est en situation irrégulière depuis 5 ans.",
+"Irena, 30 ans, ukrainienne, ne parvient pas à faire renouveler son titre de séjour."];
 
 var description_portrait = ['<span style="font-weight: bold">Elias ne parvient pas à rejoindre l’Angleterre</span> où il désire effectuer sa demande d’asile et <span style="font-weight: bold">où résident déjà sa femme et ses enfants.</span> Pris dans une rafle en octobre 2015, <span style="font-weight: bold">Elias a été conduit dans en centre de rétention administrative</span> puis, libéré quelques jours plus tard, il est retourné à Calais pour tenter de nouveau le passage.</p>',
-'Elle est obligée de travailler au noir pour survivre et <span style="font-weight:bold">est exploitée la plupart du temps</span>. Dépourvue de fiche de paies elle n’arrive pas à obtenir des papiers en tant que salariée.'];
+'Elle est obligée de travailler au noir pour survivre et <span style="font-weight:bold">est exploitée la plupart du temps</span>. Dépourvue de fiche de paies elle n’arrive pas à obtenir des papiers en tant que salariée.',
+'<span style="font-weight:bold">Irena</span> est confrontée chaque fois à des procédures complexes et se voit renvoyer de guichet en guichet. Sa crainte ? <span style="font-weight:bold">Que son titre de séjour expire et qu’elle perde tous ses droits.</span>'];
 
-var bg_portrait = ["https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_elias.png",
-"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/bg-zeinab.jpg",
-"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/bg-irena.jpg"];
+var bg_portrait = ["https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/bg-elias.png",
+"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/bg-zeinab.png",
+"https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/bg-irena.png"];
 
 var vidlink_portrait = ["https://player.vimeo.com/video/187147885",
-"https://player.vimeo.com/video/188299089"];
-
-var description_teaser = ["Retrouvez le portrait d’Elias, 35 ans, syrien, bloqué à Calais.", 
-"Retrouvez le portrait de Zeinab, 28 ans, de république démocratique du congo, en situation irrégulière depuis 5 ans.",
-"Retrouvez le portrait d’Iréna, 30 ans, ukrainienne, ne parvenant pas à faire renouveler son titre de séjour.",];
-
-var titre_teaser = ["À PARTIR DU 18 OCTOBRE",
-"À PARTIR DU 28 OCTOBRE",
-"À PARTIR DU 7 NOVEMBRE"];
+"https://player.vimeo.com/video/188299089",
+/*IRENA A MODIF */ "https://player.vimeo.com/video/188299089"];
 
 var bg_teaser = ["https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_elias.png",
 "https://s3.amazonaws.com/heroku-adfinitas-campaign/La-Cimade-lp-campaign-facebook/img_tease_zeinab.png",
@@ -401,53 +401,62 @@ $('.portrait-zeinab').click(function () {
 });
 
 $('.portrait-irena').click(function () {
-	changeTeaser(2);
-	$('#block-teaser').removeClass('large-offset-1 end');
-	$('#block-teaser').addClass('large-offset-6');
-	$('#contener-img-teaser').css("background-position","10% 30%");
-	scrollTo($('#contener-img-teaser'));
+	changePortrait(2);
+	scrollTo($('#slide-portrait'));
 });
-
-function changeTeaser(nb) {
-	$('#contener-img-teaser').css("background-image", "url(" + bg_teaser[nb] + ")");  
-	$('#titre-teaser').text(titre_teaser[nb]);
-	$('#description-teaser').text(description_teaser[nb]);
-}
 
 function changePortrait(nb) {
 	cur_act = nb
-	$('#slide-portrait').css("background-image", "url(" + bg_teaser[nb] + ")");  
-	$('#titre-portrait').html(titre_portrait[nb]);
-	$('#description-portrait').html(description_portrait[nb]);
-	$('#video-portrait').attr("src", vidlink_portrait[nb]);
-	console.log(name_portrait[nb]);
-	$('#nom-portrait').text(name_portrait[nb]);
-	refresh_view();
-	refresh_others();
-}
-
-function refresh_others()
-{
-	if (cur_act == 0)
-	{
-		$('#name-others').html("de Zeinab");
-		$("#other_portrait").attr("src", portrait_other[1]);
+	if (nb == 2) {
+		$('.block-portrait-other').hide();
+		$('.block-portrait-irena').show();
 	}
-	else
-	{
-		$('#name-others').html("d'Elias");
-		$("#other_portrait").attr("src", portrait_other[0]);
-	}	
+	else {
+		$('.block-portrait-irena').hide();
+		$('#slide-portrait').css("background-image", "url(" + bg_portrait[nb] + ")");  
+		$('#titre-portrait').html(titre_portrait[nb]);
+		$('#description-portrait').html(description_portrait[nb]);
+		$('#video-portrait').attr("src", vidlink_portrait[nb]);
+		$('.block-portrait-other').show();
+	}
+	$('.nom-portrait').text(name_portrait[nb]);
+	$('#slide-portrait').css("background-image", "url(" + bg_portrait[nb] + ")");  
+	refresh_view();
 }
 
-$("#other_portrait").click(function()
+$(".other-portrait").click(function()
 {
-	if (cur_act == 0)
-		changePortrait(1);
-	else
-		changePortrait(0);
-	scrollTo("#slide-portrait");
+	var i = whichOtherPortrait();
+	var j = whichActualPortrait($(this).attr("src"));
+	scrollToOtherPortrait("#slide-portrait", $(this), portrait_other[i]);
+	changePortrait(j);
 });
+
+function whichActualPortrait(item) {
+	var i = 0;
+
+	while (i < 3) {
+		if (item == portrait_other[i])
+			return i;
+		i++;
+	}
+}
+
+function whichOtherPortrait() {
+	var i = 0;
+	var tab = [0, 0, 0];
+
+	$('.other-portrait').each( function() {
+		if ($(this).attr("src") == portrait_other[i])
+			tab[i] = 1;
+		i++;
+	});
+	console.log(tab[0] +',' + tab[1] +',' + tab[2])
+	for (i = 0; i < 3; i++) {
+		if (tab[i] == 0)
+			return i;
+	}
+}
 
 function 	scrollTo(next){
 	if ($(next).length != 0)
@@ -455,6 +464,18 @@ function 	scrollTo(next){
 		$('html, body').stop().animate({
 			scrollTop: $(next).offset().top + 1
 		}, 700, 'swing');
+		return false;
+	}
+};
+
+function 	scrollToOtherPortrait(next, item, portrait){
+	if ($(next).length != 0)
+	{
+		$('html, body').stop().animate({
+			scrollTop: $(next).offset().top + 1
+		}, 700, 'swing', function() {
+			item.attr("src", portrait);
+		});
 		return false;
 	}
 };
