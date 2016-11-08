@@ -420,7 +420,7 @@ function changePortrait(nb) {
 		$('.block-portrait-other').show();
 	}
 	$('.nom-portrait').text(name_portrait[nb]);
-	$('#slide-portrait').css("background-image", "url(" + bg_portrait[nb] + ")");  
+
 	refresh_view();
 }
 
