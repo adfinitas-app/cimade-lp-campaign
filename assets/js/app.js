@@ -413,12 +413,12 @@ function changePortrait(nb) {
 	}
 	else {
 		$('.block-portrait-irena').hide();
-		$('#slide-portrait').css("background-image", "url(" + bg_portrait[nb] + ")");  
 		$('#titre-portrait').html(titre_portrait[nb]);
 		$('#description-portrait').html(description_portrait[nb]);
 		$('#video-portrait').attr("src", vidlink_portrait[nb]);
 		$('.block-portrait-other').show();
 	}
+	$('#slide-portrait').css("background-image", "url(" + bg_portrait[nb] + ")");  
 	$('.nom-portrait').text(name_portrait[nb]);
 
 	refresh_view();
